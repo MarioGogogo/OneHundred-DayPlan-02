@@ -31,6 +31,7 @@ const isAnagram2 = (s,t)=>{
 
     const hash = {}
 
+
     for (const k of s) {
         hash[k] = hash[k] || 0;
         hash[k] += 1;
@@ -44,3 +45,4 @@ const isAnagram2 = (s,t)=>{
     return  true;
 
 }
+isAnagram2(s,t)

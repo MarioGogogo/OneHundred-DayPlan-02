@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-10-26 21:41:54
- * @LastEditTime: 2021-10-26 22:07:33
+ * @LastEditTime: 2021-10-26 22:22:23
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /OneHundred-DayPlan-02/数字/罗马数字转整数.js
@@ -50,7 +50,7 @@ const romanToIntOne = (num) => {
   return result;
 };
 
-const romanToIntOne2 = (num) => {
+function romanToIntOne2 (num) {
   let result = 0;
 
   for (const c of num) {
@@ -81,9 +81,13 @@ const romanToIntOne2 = (num) => {
 
   // 剩下特殊值处理
   // 为什么减2  因为 i + v 1+5 == iv -2 其他同理
-  if (num.includes('IV') || num.includes('IX')) return (result -= 2);
-  if (num.includes('XL') || num.includes('XC')) return (result -= 20);
-  if (num.includes('CD') || num.includes('CM')) return (result -= 200);
+  if (num.includes('IV') || num.includes('IX'))
+    return (result -= 2);
+  if (num.includes('XL') || num.includes('XC'))
+    return (result -= 20);
+  if (num.includes('CD') || num.includes('CM'))
+    return (result -= 200);
 
-  return result
-};
+  return result;
+}
+romanToIntOne2(num)

@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-11-06 19:22:40
- * @LastEditTime: 2021-11-07 14:44:26
+ * @LastEditTime: 2021-11-07 14:49:23
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /OneHundred-DayPlan-02/数组/旋转图形.js
@@ -50,6 +50,7 @@ const rotate = (matrix) => {
       matrix[start + j][end] = temp;
     }
   }
+  return matrix;
 };
 
 // ❤️❤️❤️ 最容易理解的一种

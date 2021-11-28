@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-11-08 21:40:31
- * @LastEditTime: 2021-11-08 22:08:30
+ * @LastEditTime: 2021-11-08 22:11:31
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /OneHundred-DayPlan-02/数组/从排序数组中删除重复项.js
@@ -30,6 +30,7 @@ const removeDuplicates2 = (nums) => {
   //初始第一个值肯定不重复
   let count = 0;
   for (let i = 0; i < nums.length; i++) {
+    //左右不重复 则 计数值+1 继续往下一个元素比较
     if (nums[count] !== nums[i]) {
       nums[count + 1] = nums[i];
       count++;

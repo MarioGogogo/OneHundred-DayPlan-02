@@ -1,11 +1,11 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-11-28 22:07:22
- * @LastEditTime: 2021-11-28 22:15:23
+ * @LastEditTime: 2021-11-30 13:03:59
  * @LastEditors: MarioGo
  * @Description: 文件描述
- * @FilePath: /OneHundred-DayPlan-02/ 链表/相加.js
- * 可以输入预定的版权声明、个性签名、空行等
+ * @FilePath: /01-算法库/OneHundred-DayPlan-02/ 链表/相加.js
+ * 1-2-3 
  */
 
 let  addNodeList = (l1,l2)=>{

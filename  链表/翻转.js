@@ -5,25 +5,25 @@
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /01-算法库/OneHundred-DayPlan-02/ 链表/翻转.js
- * 可以输入预定的版权声明、个性签名、空行等
+ * 1-2-3-4-5-null  // 5-4-3-2-1-null
  */
-class LinkedList{
-   constructor() {
-     this.data = null;
-     this.next = null
-   }
-}
-const head = 1-2-3-4-5-null  // 5-4-3-2-1-null
-const reverseList = (head) =>{
-
-  let p1 = head
-  let p2 = null
-
-  while (p1) {
-     const temp = p1.next
-     p1.next = p1
-     p2 = p1
-     p1 = temp
+class LinkedList {
+  constructor() {
+    this.data = null;
+    this.next = null;
   }
-  return p2
 }
+const head = 1 - 2 - 3 - 4 - 5 - null; // 5-4-3-2-1-null
+const reverseList = (head) => {
+  let cur = head; //当前指针
+  let prev = null; // 前一个指针
+  let next = head;
+  while (cur) {
+    next = cur.next; //下一个指针
+    cur.next = prev;
+    prev = cur;
+    cur = next;
+  }
+
+  return prev;
+};

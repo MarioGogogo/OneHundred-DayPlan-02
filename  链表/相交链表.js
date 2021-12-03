@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-12-03 10:51:59
- * @LastEditTime: 2021-12-03 11:31:31
+ * @LastEditTime: 2021-12-03 14:31:34
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /01-算法库/OneHundred-DayPlan-02/ 链表/相交链表.js
@@ -15,11 +15,12 @@
 const getIntersectionNode = (headA,headB)=>{
     if(headA == null || headB == null) return null;
 
-    let pA  = headA;
+    let pA = headA;
     let pB = headB;
-    while (pA !== pB) {
-      pA  = pA == null ? headB : pA.next;
-      pB  = pB == null ? headA : pB.next;
+    while (pA != pB) {
+      pA = pA != null ? pA.next : headB;
+      pB = pB != null ? pB.next : headA;
     }
-    return pA
+
+    return pA ;
 }

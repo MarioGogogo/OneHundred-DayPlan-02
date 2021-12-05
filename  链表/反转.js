@@ -19,9 +19,13 @@ const reverseList = (head) => {
   let prev = null; // 前一个指针
   let next = head;
   while (cur) {
+    //第一步 移动到下一个节点
     next = cur.next; //下一个指针
+    //把前一个节点 移动到当前节点
     cur.next = prev;
+    // 移动 之前的节点
     prev = cur;
+    //把当前指针 往前挪动
     cur = next;
   }
 

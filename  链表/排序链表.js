@@ -17,8 +17,9 @@ const  sortList = (head)=>{
     while(fast != null && fast.next != null){
         slow = slow.next;
         fast = fast.next.next
+        fast = fast.next.prev
     }
-
+   
     let  middle = slow.next;
     // 打断链表
     slow.next = null   

@@ -6,7 +6,7 @@
 // 输出：[5]
 
 
-function reverseBetween(head, left,right) {
+function reverseBetween(head, left,right) {  
    let prev = null;
    let curr = head;
    let next = head;
@@ -16,11 +16,11 @@ function reverseBetween(head, left,right) {
     prev = curr;   //占位
     curr = curr.next;  //前进一位
     left--
-  }
+  }  
    
   let prev2 = prev;
   let curr2 = curr;
-  let diff = right - left //之前多少位链表反转
+  let diff = right - left //区间有多少位链表反转
   //这个区间内进行的就反转
   while (diff > 0){
     next = curr.next; 

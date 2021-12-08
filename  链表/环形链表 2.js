@@ -10,7 +10,7 @@ const detectCycle = function(head){
        slow = slow.next;
        fast = fast.next.next;
        if(slow == fast){
-          isCycles = true;
+        isCycle = true;
           break;
        }
     }

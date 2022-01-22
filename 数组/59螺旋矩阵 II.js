@@ -16,7 +16,7 @@ var generateMatrix = function (n) {
     // 定义行列
     let row = startX,
       column = startY
-    // [ startY, n - i)
+    // [ startY, n - i)  左--右
     while (column < n - i) {
       res[row][column++] = count++
     }
@@ -32,7 +32,8 @@ var generateMatrix = function (n) {
     while (row > startX) {
       res[row--][column] = count++
     }
-    startX = ++startY
+    startX++
+    startY++
   }
   if (n & 1) {
     res[startX][startY] = count

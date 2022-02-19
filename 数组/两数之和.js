@@ -14,20 +14,21 @@
 
 //第二种思路
 
-const towSum = (nums, target) => {
-  const lookup = {};
-  let res = [];
-  nums.some((v, i) => {
-    //  判断target-v 数据是否已经存在
-    if (lookup[target - v]) {
-      // 数据存在 则直接拿出来
-      res = [lookup[target - v], i];
-      return true;
+const nums = [2, 7, 11, 15]
+function twoSum(nums, target) {
+  const lookup = {}
+  let res = []
+  nums.some((v, i) => {0
+    if (lookup[v] !== undefined) {
+      res = [lookup[v], i]
+      return true
     } else {
-      //  将每一个元素添加到表中
-      lookup[v] = i;
-      return false;
+      // 现存一个 {9-2:1}  == {7:1}  然后再遍历一个值是否有 7
+      lookup[target - v] = i
+      return false
     }
-  });
-  return res;
-};
+  })
+  return res
+}
+let result = twoSum(nums, 9)
+console.log(result)

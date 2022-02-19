@@ -18,3 +18,19 @@ const singleNumber = (nums) =>{
 }
 
 console.log('object :>> ', singleNumber([4 ,1 ,2 ,1, 2]));
+
+
+
+function getSwitch(val) {
+   switch (val) {
+      case "A":
+         const aaaaa = "A"
+         console.log('A')
+         break
+      case "B":
+         console.log('B')
+         break
+   }
+}
+
+getSwitch();

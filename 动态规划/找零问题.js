@@ -44,6 +44,7 @@ var coinChange = function (coins, amount) {
   for (let i = 1; i <= amount; i++) {
     dp[i] = Number.MAX_SAFE_INTEGER
     for (let j = 0; j < coins.length; j++) {
+      // 如果当前最优解大于0 并且 剩余值大于0
       if (i - coins[j] >= 0 && dp[i - coins[j]] != Number.MAX_SAFE_INTEGER) {
         dp[i] = Math.min(dp[i - coins[j]] + 1, dp[i])
       }
